@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Come Follow Me Flower Lesson</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #but {
+        padding: 1%;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-left: 10%;
+      }
+
+      #one {
+        position: absolute;
+        margin-right: 23%;
+        margin-bottom: 20%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <img id="mainimg" src="https://raw.githubusercontent.com/jtocool7/flowers/main/row-1-column-1%20(5).png">
+      <button id="but" onclick="myFunction()">Water</button>
+      <lottie-player id="one" src="https://lottie.host/0002dede-54b7-49ff-b30d-df55e6bd187d/U9oEgeZO4X.json" background="transparent" loop speed="1" style="width: 80px; height: 80px;"></lottie-player>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      var press = 1
+      var url = "https://raw.githubusercontent.com/jtocool7/flowers/main/row-1-column-2%20(1).png"
+      const img = document.getElementById("mainimg")
+      const anim = document.getElementById("one")
+
+
+
+      function myFunction() {
+        if (press <= 4) {
+          press += 1
+
+          if (press == 2) {
+            anim.play()
+            url = "https://raw.githubusercontent.com/jtocool7/flowers/main/row-1-column-2%20(1).png"
+            img.src = url
+            setTimeout(() => {
+              anim.stop()
+            }, 700)
+          } else if (press == 3) {
+            anim.play()
+            url = "https://raw.githubusercontent.com/jtocool7/flowers/main/row-1-column-3%20(1).png"
+            img.src = url
+            setTimeout(() => {
+              anim.stop()
+            }, 700)
+          } else if (press == 4) {
+            anim.play()
+            url = "https://raw.githubusercontent.com/jtocool7/flowers/main/row-1-column-4%20(1).png"
+            img.src = url
+            setTimeout(() => {
+              anim.stop()
+              anim.style.display = "none"
+            }, 700)
+          }
+        }
+      }
+
+    </script>
+  </body>
+
+</html>
